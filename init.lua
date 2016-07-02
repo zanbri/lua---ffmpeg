@@ -193,10 +193,10 @@ do
             else
                channel_str = ' -map 0:v:' .. channel
             end
-            local ffmpeg_cmd = 'ffmpeg -i ' .. self.path ..
+            local ffmpeg_cmd = 'ffmpeg ' .. seek_str ..
+               ' -i ' .. self.path ..
                ' -r ' .. self.fps ..
                ' -t ' .. self.length ..
-               seek_str ..
                channel_str ..
                ' -s ' .. self.width .. 'x' .. self.height ..
                ' -qscale 1' ..
